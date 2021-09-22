@@ -1,4 +1,4 @@
-const BoardMember = function(name, homeState, training){
+let BoardMember = function(name, homeState, training){
     this.name = name
     this.homeState = homeState
     this.training = training 
@@ -11,14 +11,32 @@ const BoardMember = function(name, homeState, training){
 //     releasePressStatement: "You will see great things from Scuber.",
 //     sayHi: `Hi, my name ${this.name}. I am from ${this.homeState}, and I was trained in ${this.training}.`
 // }
-
-// Object.entries(methods).forEach(entry => {
+// const keys = []
+// const values = []
+// Object.entries(methods).map((entry) => {
 //     const [key, value] = entry
-//     key = function(){
-//         return value
-//     }
-//     BoardMember.prototype.add(key)
+//     keys.push(key)
+//     values.push(value)
 // })
+
+// console.log(keys)
+
+
+
+
+// ['foo', 'bar'].forEach(function (method) {
+//     String.prototype[method] = function () {
+//         resolve(method);
+//     };
+// });
+
+// function resolve(method) {
+//     alert(method);
+// }
+
+// ("hello world").foo();
+// ("hello world").bar();
+
 
 BoardMember.prototype.veto = function(){
     return "No, I must disagree"
